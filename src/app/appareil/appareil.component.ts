@@ -37,7 +37,7 @@ export class AppareilComponent implements OnInit {
     this.appareilService.switchOffOne(this.indexOfAppareil);
   }
   changerNom(event: any) {
-    this.appareilName = event.target.value;
+    this.appareilService.appareils[this.indexOfAppareil].name = event.target.value;
     this.appareilService.changerNommade(this.indexOfAppareil);
   }
 }

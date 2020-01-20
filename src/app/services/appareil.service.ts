@@ -7,7 +7,7 @@ export class AppareilService {
 
   appareilSubject = new Subject<any[]>();
 
- private appareils = [ /*je vide l'array en dur puisque j'ai une version enregistrée sur firebase*/
+ public appareils = [ /*je vide l'array en dur puisque j'ai une version enregistrée sur firebase
     {
       id: 1,
       name: 'machine à laver',
@@ -22,7 +22,7 @@ export class AppareilService {
       id: 3,
       name: 'Ordinateur',
       status: 'éteint'
-    }
+    }*/
   ];
  constructor(private httpClient: HttpClient) {}
   emitAppareilSubject() {
@@ -59,7 +59,6 @@ export class AppareilService {
     this.emitAppareilSubject();
   }
   changerNommade(index: number) {
-   this.appareils[index].name = event.target.value;
    this.emitAppareilSubject();
   }
   addAppareil(name: string, status: string) {
