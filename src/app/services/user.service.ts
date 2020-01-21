@@ -7,7 +7,7 @@ export class UserService {
       firstName: 'James',
       lastName: 'Smith',
       email: 'james@smith.com',
-      drinkPreference: 'Coca',
+      frameworkPreference: 'Angular',
       hobbies: [
         'coder',
         'la dégustation de café'
